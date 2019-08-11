@@ -9,8 +9,8 @@ The code is somewhat generic. You can play around with the variables in the ```S
 * `cellSize` is the size of one cell
 * `numTrollCells` is the number of trolls hiding
 
-If you do not want to test the code there is a live version my [webpage](http://www.claesgill.com/trollsweeper).
+If you do not want to test the code there is a live version on my [webpage](http://www.claesgill.com/trollsweeper).
 
-*TODO: Make the user deside the number of cells and trolls.*
+**TODO: Make the user deside the number of cells and trolls.**
 
 _Inspired by the coding challenge #71 made by [@TheCodingTrain](https://github.com/CodingTrain)_
