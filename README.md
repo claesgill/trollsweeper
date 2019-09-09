@@ -11,6 +11,8 @@ The code is somewhat generic. You can play around with the variables in the ```S
 
 If you do not want to test the code there is a live version on my [webpage](http://www.claesgill.com/trollsweeper).
 
+![](/images/trollsweeper_screenshot.PNG)
+
 **TODO: Make the user deside the number of cells and trolls.**
 
 _Inspired by the coding challenge #71 made by [@TheCodingTrain](https://github.com/CodingTrain)_
