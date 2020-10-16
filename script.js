@@ -232,6 +232,13 @@ function checkCellClicked(){
                 mouseY < grid[i][j].y + grid[i][j].w){
                 if(grid[i][j].isTroll){
                     gameOver();
+                    ctx.clearRect(10, cols*cellSize+10, rows*cellSize+40, 100);
+                    ctx.font = "20px Courier New";
+                    ctx.fillStyle = "black";
+                    ctx.fillText("Game over! Restarting game in 5 seconds!", 10, cols*cellSize+30);
+                    window.setTimeout(() => {
+                        window.location.reload()
+                    }, 5000)
                 }
                 else if(grid[i][j].isMarked){
                     markersRemaining++;
@@ -265,6 +272,10 @@ function markCell(shiftKey){
 function updateCanvas(){
     // Every loop check if mouse is clicked
     window.addEventListener("mouseup", mouseClicked);
+    // Check touch event
+    window.addEventListener("touchend", mouseClicked)
+    // Refrech if touched twice
+    // window.addEventListener("touchmove", window.location.reload())
 }
 
 function loop(){
