@@ -135,7 +135,7 @@ function SetupCanvas(){
     // Parameters
     cols = 10;
     rows = 10;
-    cellSize = 50;
+    cellSize = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 30 : 50
     numTrollCells = 12;
     markersRemaining = numTrollCells;
 
@@ -231,11 +231,12 @@ function checkCellClicked(){
                 mouseY > grid[i][j].y &&
                 mouseY < grid[i][j].y + grid[i][j].w){
                 if(grid[i][j].isTroll){
-                    gameOver();
-                    ctx.clearRect(10, cols*cellSize+10, rows*cellSize+40, 100);
-                    ctx.font = "20px Courier New";
-                    ctx.fillStyle = "black";
-                    ctx.fillText("Game over! Restarting game in 5 seconds!", 10, cols*cellSize+30);
+                    gameOver()
+                    ctx.clearRect(10, cols*cellSize+10, rows*cellSize+40, 100)
+                    ctx.font = "20px Courier New"
+                    ctx.fillStyle = "black"
+                    ctx.fillText("Game over!", 10, cols*cellSize+30)
+                    ctx.fillText("Restarting game in 5 seconds!", 10, cols*cellSize+60)
                     window.setTimeout(() => {
                         window.location.reload()
                     }, 5000)
