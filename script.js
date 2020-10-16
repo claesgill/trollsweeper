@@ -274,8 +274,6 @@ function updateCanvas(){
     window.addEventListener("mouseup", mouseClicked);
     // Check touch event
     window.addEventListener("touchend", mouseClicked)
-    // Refrech if touched twice
-    // window.addEventListener("touchmove", window.location.reload())
 }
 
 function loop(){
